@@ -26,6 +26,7 @@ class Application
                       
                     elsif req.path.match(/add/)
                       search_term = req.params["q"] 
+                      puts req.params[:item]
                       #if it was search_term = req (this would b the entire url)
                       # with the params[:key] => this is the input the user is searching for (starts after the = sign, everything after = sign is called params, short for parameter)
                       # this is saving the url's key to a variable
