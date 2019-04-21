@@ -37,6 +37,7 @@ class Application
                           # resp.write "added #{search_term}"
                           puts @@cart
                         else
+                          puts @@cart
                           resp.write "We don't have that item #{search_term}"
                         end
                     else
