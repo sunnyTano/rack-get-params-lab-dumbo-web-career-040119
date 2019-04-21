@@ -33,7 +33,7 @@ class Application
                           
                           #.inlcudes iterates over the array but only returns true or false not the item itself
                           #looking thru the url and checking to see if there is a  path(/items) 
-                          @@cart << search_term #this is the item we are searching for, the parameter (string after the equal sign)
+                          @@cart.push(search_term) #this is the item we are searching for, the parameter (string after the equal sign)
                           # resp.write "added #{search_term}"
                         else
                           resp.write "We don't have that item #{search_term}"
