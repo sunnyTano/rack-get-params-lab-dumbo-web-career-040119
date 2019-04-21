@@ -40,7 +40,8 @@ class Application
                         else
                           puts @@cart
                           puts @@items
-                          puts search_term
+                          # puts search_term
+                          puts req.params
                           resp.write "We don't have that item #{search_term}"
                         end
                     else
