@@ -39,6 +39,7 @@ class Application
                         else
                           puts @@cart
                           puts @@items
+                          puts search_term
                           resp.write "We don't have that item #{search_term}"
                         end
                     else
