@@ -26,7 +26,7 @@ class Application
                       
                     elsif req.path.match(/add/)
                       search_term = req.params["q"] 
-                      puts req.params[:item]
+                      # puts req.params[:item]
                       #if it was search_term = req (this would b the entire url)
                       # with the params[:key] => this is the input the user is searching for (starts after the = sign, everything after = sign is called params, short for parameter)
                       # this is saving the url's key to a variable
@@ -37,11 +37,12 @@ class Application
                           @@cart << search_term #this is the item we are searching for, the parameter (string after the equal sign)
                           # resp.write "added #{search_term}"
                           # puts @@cart
-                          puts req.params[:item]
+                          puts search_term
+                          # puts req.params[:item]
                         else
                          
                           # puts search_term
-                          puts req.params
+                          # puts req.params
                           resp.write "We don't have that item #{search_term}"
                         end
                     else
