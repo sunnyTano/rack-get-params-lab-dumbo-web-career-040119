@@ -38,6 +38,7 @@ class Application
                           puts @@cart
                         else
                           puts @@cart
+                          puts @@items
                           resp.write "We don't have that item #{search_term}"
                         end
                     else
