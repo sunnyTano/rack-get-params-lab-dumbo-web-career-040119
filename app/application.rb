@@ -35,7 +35,7 @@ class Application
                           #looking thru the url and checking to see if there is a  path(/items) 
                           @@cart << search_term #this is the item we are searching for, the parameter (string after the equal sign)
                           # resp.write "added #{search_term}"
-                          puts @@cart
+                          # puts @@cart
                           puts req.params
                         else
                           puts @@cart
