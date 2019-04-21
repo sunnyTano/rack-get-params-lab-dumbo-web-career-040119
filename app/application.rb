@@ -36,7 +36,7 @@ class Application
                           @@cart << search_term #this is the item we are searching for, the parameter (string after the equal sign)
                           # resp.write "added #{search_term}"
                           puts @@cart
-                          puts search_term
+                          puts req.params
                         else
                           puts @@cart
                           puts @@items
