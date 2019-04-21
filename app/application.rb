@@ -25,20 +25,16 @@ class Application
                         end
                       
                     elsif req.path.match(/add/)
-                      search_term = req.params["item"] 
+                      search_term = req.params[:item] 
                       # puts req.params[:item]
                       #if it was search_term = req (this would b the entire url)
                       # with the params[:key] => this is the input the user is searching for (starts after the = sign, everything after = sign is called params, short for parameter)
                       # this is saving the url's key to a variable
                         if @@items.include?(search_term) 
-                          
-                          #.inlcudes iterates over the array but only returns true or false not the item itself
+                           #.inlcudes iterates over the array but only returns true or false not the item itself
                           #looking thru the url and checking to see if there is a  path(/items) 
                           @@cart << search_term #this is the item we are searching for, the parameter (string after the equal sign)
                           resp.write "added #{search_term}"
-                          # puts @@cart
-                          puts "this is the search: #{search_term}"
-                          # puts req.params[:item]
                         else
                          
                           # puts search_term
